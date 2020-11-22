@@ -52,19 +52,19 @@ public class GiftCardTest
 	}
 	
 	@Test
-	public void constructor_NegativeBalance()
+	public void constructor_NegBalance()
 	{
 		assertThrows(IllegalArgumentException.class, () -> {new GiftCard(1,-100.00);});
 	}
 	
 	@Test
-	public void constructor_IncorrectID_Low()
+	public void constructor_IncorrectID_Neg()
 	{
 		assertThrows(IllegalArgumentException.class, () -> {new GiftCard(-100,100.00d);});
 	}
 	
 	@Test
-	public void constructor_IncorrectID_High()
+	public void constructor_IncorrectID_Pos()
 	{
 		assertThrows(IllegalArgumentException.class, () -> {new GiftCard(10000,100.00d);});
 	}
