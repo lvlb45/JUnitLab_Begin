@@ -58,13 +58,13 @@ public class GiftCardTest
 	}
 	
 	@Test
-	public void constructor_IncorrectID_Neg()
+	public void constructor_IncorrectID_Low()
 	{
 		assertThrows(IllegalArgumentException.class, () -> {new GiftCard(-100,100.00d);});
 	}
 	
 	@Test
-	public void constructor_IncorrectID_Pos()
+	public void constructor_IncorrectID_High()
 	{
 		assertThrows(IllegalArgumentException.class, () -> {new GiftCard(10000,100.00d);});
 	}
